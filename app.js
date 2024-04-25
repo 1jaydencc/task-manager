@@ -8,11 +8,7 @@ const config = require("./config/config.json")["development"];
 const cors = require("cors");
 const sequelize = new Sequelize(config);
 
-app.use(
-    cors({
-        origin: "https://task-manager-nine-inky.vercel.app"
-    }),
-);
+app.use(cors());
 
 sequelize
     .authenticate()
