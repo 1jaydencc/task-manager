@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-    baseURL: `https://34.31.207.186:443`,
+    baseURL: `https://task-manager-xmhpkuowla-uc.a.run.app`,
     withCredentials: false, // This is the default
     headers: {
         Accept: "application/json",
