@@ -2,22 +2,37 @@
   "development": {
     "username": "task_manager_user",
     "password": "jayden",
-    "database": "task_manager_db",
-    "host": "localhost",
-    "dialect": "postgres"
+    "database": "task-manager",
+    "host": "/cloudsql/task-manager-421422:us-central1:task-manager",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "rejectUnauthorized": false
+      }
+    }
   },
   "test": {
     "username": "task_manager_user",
     "password": "jayden",
-    "database": "task_manager_db",
-    "host": "localhost",
-    "dialect": "postgres"
+    "database": "task-manager",
+    "host": "/cloudsql/task-manager-421422:us-central1:task-manager",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "rejectUnauthorized": false
+      }
+    }
   },
   "production": {
     "username": "task_manager_user",
     "password": "jayden",
-    "database": "task_manager_db",
-    "host": "localhost",
-    "dialect": "postgres"
+    "database": "task-manager",
+    "host": "/cloudsql/task-manager-421422:us-central1:task-manager",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "rejectUnauthorized": false
+      }
+    }
   }
 }
