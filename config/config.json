@@ -9,14 +9,14 @@
   "test": {
     "username": "task_manager_user",
     "password": "jayden",
-    "database": "task_manager_test",
+    "database": "task_manager_db",
     "host": "localhost",
     "dialect": "postgres"
   },
   "production": {
     "username": "task_manager_user",
     "password": "jayden",
-    "database": "task_manager_production",
+    "database": "task_manager_db",
     "host": "localhost",
     "dialect": "postgres"
   }

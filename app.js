@@ -11,6 +11,7 @@ const sequelize = new Sequelize(config);
 app.use(
     cors({
         origin: "http://localhost:8080",
+        origin: "https://task-manager-f8wxiivfu-1jaydenccs-projects.vercel.app"
     }),
 );
 
