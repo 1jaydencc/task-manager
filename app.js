@@ -131,7 +131,7 @@ app.get("/tasks/:id", async (req, res) => {
     }
 });
 
-
+// Create a task
 app.post('/tasks', async (req, res) => {
     const { title, description, status = 'pending', dueDate, taskListId, orderIndex = 0 } = req.body;
 
@@ -182,10 +182,7 @@ app.put('/tasks/:id', async (req, res) => {
     }
 });
 
-
-
 // Delete a task
-
 app.delete("/tasks/:id", async (req, res) => {
     const id = req.params.id;
 
@@ -213,24 +210,6 @@ app.delete("/tasks/:id", async (req, res) => {
     }
 });
 
-
-// Delete a task
-app.delete("/tasks/:id", async (req, res) => {
-    try {
-        const deleted = await Task.destroy({
-            where: { id: req.params.id },
-        });
-        if (deleted) {
-            res.status(204).send("Task deleted");
-        } else {
-            res.status(404).send("Task not found");
-        }
-    } catch (error) {
-        res.status(500).send(error);
-    }
-});
-
-
 // Get all task lists
 app.get('/tasklists', async (req, res) => {
     try {
@@ -242,6 +221,7 @@ app.get('/tasklists', async (req, res) => {
     }
 });
 
+// Get all tasks for a task list
 app.get('/tasklists/:taskListId/tasks', async (req, res) => {
     const { taskListId } = req.params;
     const { sortBy = 'custom', sortOrder = 'ASC' } = req.query; // Default to custom sort
@@ -269,6 +249,7 @@ app.get('/tasklists/:taskListId/tasks', async (req, res) => {
     }
 });
 
+// Create a new task list
 app.post('/tasklists', async (req, res) => {
     try {
         const taskList = await TaskList.create({
