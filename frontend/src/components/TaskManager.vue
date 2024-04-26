@@ -183,14 +183,15 @@ export default {
             const name = prompt("Enter the name of the new task list:");
             if (name) {
                 try {
-                    await TaskService.addTaskList(name);
+                    const response = await TaskService.addTaskList(name); // Assume this returns the newly added task list with its ID
                     await this.fetchTaskLists(); // Refresh the list of task lists
+                    this.currentTaskListId = response.data.id; // Set the newly created task list as the current task list
+                    this.fetchTasks(); // Fetch tasks for the newly selected task list
                 } catch (error) {
                     console.error('Failed to add new task list:', error);
                 }
             }
         },
-
         async addTask() {
             if (!this.currentTaskListId) {
                 alert("Please select a task list first.");
