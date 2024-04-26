@@ -3,7 +3,7 @@
     "username": "task_manager_user",
     "password": "jayden",
     "database": "task_manager_db",
-    "host": "/cloudsql/task-manager-421422:us-central1:task-manager",
+    "host": "10.16.192.3",
     "dialect": "postgres",
     "dialectOptions": {
       "ssl": {
@@ -15,7 +15,7 @@
     "username": "task_manager_user",
     "password": "jayden",
     "database": "task_manager_db",
-    "host": "/cloudsql/task-manager-421422:us-central1:task-manager",
+    "host": "10.16.192.3",
     "dialect": "postgres",
     "dialectOptions": {
       "ssl": {
@@ -27,7 +27,7 @@
     "username": "task_manager_user",
     "password": "jayden",
     "database": "task_manager_db",
-    "host": "/cloudsql/task-manager-421422:us-central1:task-manager",
+    "host": "10.16.192.3",
     "dialect": "postgres",
     "dialectOptions": {
       "ssl": {
