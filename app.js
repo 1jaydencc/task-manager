@@ -4,9 +4,20 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
 const { Sequelize, DataTypes, QueryTypes } = require("sequelize");
-const config = require("./config/config.json")["development"];
 const cors = require("cors");
-const sequelize = new Sequelize(config);
+const sequelize = new Sequelize({
+    username: process.env.PSQL_USER,
+    password: process.env.PSQL_PW,
+    database: process.env.PSQL_DB,
+    host: process.env.PSQL_HOST,
+    dialect: "postgres",
+    dialectOptions: {
+        ssl: {
+            require: true,
+            rejectUnauthorized: false 
+        }
+    }
+});
 
 app.use(cors());
 
