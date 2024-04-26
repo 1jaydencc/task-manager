@@ -58,10 +58,6 @@ const Task = sequelize.define("Task", {
             fields: ['dueDate']
         },
         {
-            name: 'status_index',
-            fields: ['status']
-        },
-        {
             name: 'orderIndex_index',
             fields: ['orderIndex']
         }
